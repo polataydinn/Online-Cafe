@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "757587408281",
+    "project_id": "onlinecafe-27426",
+    "storage_bucket": "onlinecafe-27426.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757587408281:android:bbef1cf3a674231d808f08",
+        "android_client_info": {
+          "package_name": "com.example.online_cafe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757587408281-v2o78f8enuipaarl9bl5pn9s6nq0u9q9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9Pp1nvutd-_ncryCbw_WqVrBTiBUUoA8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757587408281-v2o78f8enuipaarl9bl5pn9s6nq0u9q9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
