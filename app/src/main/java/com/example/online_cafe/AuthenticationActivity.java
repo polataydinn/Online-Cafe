@@ -41,7 +41,8 @@ public class AuthenticationActivity extends AppCompatActivity {
             loginButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    login();
+                    login("customer");
+                    changeActivity();
                 }
             });
 
@@ -51,7 +52,7 @@ public class AuthenticationActivity extends AppCompatActivity {
             loginButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    login();
+                    login("waiter");
                 }
             });
         }
@@ -65,11 +66,15 @@ public class AuthenticationActivity extends AppCompatActivity {
             }
         });
     }
+    private void changeActivity(){
+        Intent intent = new Intent(getApplicationContext(), StoreActivity.class);
+        startActivity(intent);
+    }
 
-    private void login() {
+    private void login(String path) {
         final String userEnteredUsername =  usernameEditText.getText().toString().trim();
         final String userEnteredPassword = passwordEditText.getText().toString().trim();
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users");
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference(path);
         Query checkEMail = reference.orderByChild("username").equalTo(userEnteredUsername);
         checkEMail.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -80,10 +85,10 @@ public class AuthenticationActivity extends AppCompatActivity {
                     if (passwordDB.equals(userEnteredPassword)) {
                         Toast.makeText(getApplicationContext(), "Giriş Başarılı", Toast.LENGTH_SHORT).show();
                     }else{
-                        Toast.makeText(getApplicationContext(),"E-Mail yada Şifre Hatalı",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Kullanıcı Adı yada Şifre Hatalı",Toast.LENGTH_SHORT).show();
                     }
                 }else{
-                    Toast.makeText(getApplicationContext(),"E-Mail yada Şifre Hatalı",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Kullanıcı Adı yada Şifre Hatalı",Toast.LENGTH_SHORT).show();
                 }
             }
 

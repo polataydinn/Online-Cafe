@@ -53,18 +53,6 @@
         app:layout_constraintTop_toBottomOf="@+id/lLogin_button"
         app:layout_constraintVertical_bias="0.107" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="122dp"
-        android:layout_height="116dp"
-        android:src="@drawable/ic_qr_scanner"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lRegister_text"
-        app:layout_constraintVertical_bias="0.191" />
-
     <EditText
         android:id="@+id/lPassword_area"
         android:layout_width="wrap_content"
