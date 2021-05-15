@@ -12,7 +12,7 @@
     <string name="welcome_customer">Müşteri Giriş Sayfasına Hoşgeldiniz</string>
     <string name="welcome_waiter">Garson Giriş Sayfasına Hoşgeldiniz</string>
     <string name="meal">Yiyecek</string>
-    <string name="desert">Tatlı</string>
+    <string name="dessert">Tatlı</string>
     <string name="drink">İçecek</string>
     <string name="fast_food">Fast Food</string>
 </resources>

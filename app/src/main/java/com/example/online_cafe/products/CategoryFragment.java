@@ -106,7 +106,6 @@ public class CategoryFragment extends Fragment {
         data.add(new ProductData(R.drawable.apple_pie,"Elmalı Turta",12));
         data.add(new ProductData(R.drawable.ice_cream,"Dondurma",8));
         data.add(new ProductData(R.drawable.cookie,"Kurabiye",4));
-        data.add(new ProductData(R.drawable.cheescake,"Cheesecake",15));
         data.add(new ProductData(R.drawable.pudding,"Pudding",8));
         data.add(new ProductData(R.drawable.pancake,"Pancake",10));
         data.add(new ProductData(R.drawable.baklava,"Baklava",7));
@@ -115,6 +114,15 @@ public class CategoryFragment extends Fragment {
 
     private List<ProductData> setMealItems() {
         List<ProductData> data = new ArrayList<>();
+        data.add(new ProductData(R.drawable.lahmacun,"Lahmacun",5));
+        data.add(new ProductData(R.drawable.iskender,"İskender",20));
+        data.add(new ProductData(R.drawable.adana,"Adana Kebap",15));
+        data.add(new ProductData(R.drawable.patlican_kebap,"Patlıcan Kebabı",15));
+        data.add(new ProductData(R.drawable.patty,"Börek",12));
+        data.add(new ProductData(R.drawable.doner,"Döner",8));
+        data.add(new ProductData(R.drawable.rice,"Pilav",5));
+        data.add(new ProductData(R.drawable.soup,"Mercimek Çorbası",7));
+        data.add(new ProductData(R.drawable.cig_kofte,"Çiğ Köfte",10));
         return data;
     }
 }

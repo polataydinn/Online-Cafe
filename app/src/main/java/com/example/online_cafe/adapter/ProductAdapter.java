@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,6 +31,9 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(ProductAdapter.ViewHolder holder, int position) {
+        holder.itemView.getRootView().setOnClickListener(v -> holder
+                .productCheckBox
+                .setChecked(!holder.productCheckBox.isChecked()));
         holder.productPrice.setText(list.get(position).productPrice + " TL");
         holder.productImage.setImageResource(list.get(position).productPicturePath);
         holder.productName.setText(list.get(position).productName);
@@ -44,12 +48,14 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         TextView productName;
         ImageView productImage;
         TextView productPrice;
+        CheckBox productCheckBox;
 
         public ViewHolder( View itemView) {
             super(itemView);
             productName = itemView.findViewById(R.id.product_name);
             productImage = itemView.findViewById(R.id.product_image);
             productPrice = itemView.findViewById(R.id.product_price);
+            productCheckBox = itemView.findViewById(R.id.product_check_box);
         }
     }
 }

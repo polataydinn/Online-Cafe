@@ -42,7 +42,6 @@ public class AuthenticationActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     login("customer");
-                    changeActivity();
                 }
             });
 
@@ -84,6 +83,7 @@ public class AuthenticationActivity extends AppCompatActivity {
 
                     if (passwordDB.equals(userEnteredPassword)) {
                         Toast.makeText(getApplicationContext(), "Giriş Başarılı", Toast.LENGTH_SHORT).show();
+                        changeActivity();
                     }else{
                         Toast.makeText(getApplicationContext(),"Kullanıcı Adı yada Şifre Hatalı",Toast.LENGTH_SHORT).show();
                     }
