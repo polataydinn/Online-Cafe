@@ -15,4 +15,8 @@
     <string name="dessert">Tatlı</string>
     <string name="drink">İçecek</string>
     <string name="fast_food">Fast Food</string>
+    <string name="confirm">Onayla</string>
+    <string name="totalAmount">Toplam :</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

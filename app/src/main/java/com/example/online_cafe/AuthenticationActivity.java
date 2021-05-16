@@ -1,5 +1,6 @@
 package com.example.online_cafe;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -51,6 +52,7 @@ public class AuthenticationActivity extends AppCompatActivity {
             loginButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
                     login("waiter");
                 }
             });
@@ -64,10 +66,6 @@ public class AuthenticationActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
-    private void changeActivity(){
-        Intent intent = new Intent(getApplicationContext(), StoreActivity.class);
-        startActivity(intent);
     }
 
     private void login(String path) {
@@ -83,7 +81,14 @@ public class AuthenticationActivity extends AppCompatActivity {
 
                     if (passwordDB.equals(userEnteredPassword)) {
                         Toast.makeText(getApplicationContext(), "Giriş Başarılı", Toast.LENGTH_SHORT).show();
-                        changeActivity();
+                        if(CONST.userType == "musteri"){
+                            Intent intentStore = new Intent(getApplicationContext(),StoreActivity.class);
+                            startActivity(intentStore);
+                        }
+                        else{
+                            Intent intentWaiter = new Intent(getApplicationContext(),WaiterActivity.class);
+                            startActivity(intentWaiter);
+                        }
                     }else{
                         Toast.makeText(getApplicationContext(),"Kullanıcı Adı yada Şifre Hatalı",Toast.LENGTH_SHORT).show();
                     }

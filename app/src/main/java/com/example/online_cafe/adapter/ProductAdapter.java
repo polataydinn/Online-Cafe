@@ -8,6 +8,8 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.online_cafe.CONST;
 import com.example.online_cafe.R;
 import com.example.online_cafe.products.ProductData;
 import java.util.Collections;
@@ -15,10 +17,12 @@ import java.util.List;
 
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder> {
+    private View.OnClickListener mListener;
     List<ProductData> list = Collections.emptyList();
     Context context;
-    public ProductAdapter(List<ProductData> data){
+    public ProductAdapter(List<ProductData> data, View.OnClickListener listener){
         this.list = data;
+        this.mListener = listener;
     }
 
 
@@ -31,9 +35,20 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(ProductAdapter.ViewHolder holder, int position) {
-        holder.itemView.getRootView().setOnClickListener(v -> holder
-                .productCheckBox
-                .setChecked(!holder.productCheckBox.isChecked()));
+        holder.itemView.getRootView().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                holder.productCheckBox
+                        .setChecked(!holder.productCheckBox.isChecked());
+                if(holder.productCheckBox.isChecked()){
+                    CONST.totalAmount = CONST.totalAmount + list.get(position).productPrice;
+                    CONST.listOfOrders.add(list.get(position));
+                }else{
+                    CONST.totalAmount = CONST.totalAmount -list.get(position).productPrice;
+                }
+                mListener.onClick(v);
+            }
+        });
         holder.productPrice.setText(list.get(position).productPrice + " TL");
         holder.productImage.setImageResource(list.get(position).productPicturePath);
         holder.productName.setText(list.get(position).productName);

@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.online_cafe"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -35,11 +35,15 @@ dependencies {
     implementation 'org.jetbrains:annotations:15.0'
     implementation 'com.google.firebase:firebase-core:9.6.1'
     implementation 'com.google.firebase:firebase-database:20.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.+'
     implementation "androidx.recyclerview:recyclerview:1.2.0"
     implementation "androidx.recyclerview:recyclerview-selection:1.1.0"
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.4'
+    implementation 'com.google.zxing:core:3.3.2'
+    implementation 'com.budiyev.android:code-scanner:2.1.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

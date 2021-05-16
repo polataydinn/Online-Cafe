@@ -5,7 +5,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
+
 import androidx.fragment.app.Fragment;
+
+import com.example.online_cafe.CONST;
 import com.example.online_cafe.R;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +20,7 @@ public class CategoryFragment extends Fragment {
     private Button drinkButton;
     private Button dessertButton;
     private Button mealButton;
+    private Button orderButton;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -29,6 +34,7 @@ public class CategoryFragment extends Fragment {
         drinkButton = view.findViewById(R.id.drink_button);
         dessertButton = view.findViewById(R.id.dessert_button);
         mealButton = view.findViewById(R.id.meal_button);
+        orderButton = view.findViewById(R.id.confirm_button);
 
         fastFoodButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +67,17 @@ public class CategoryFragment extends Fragment {
                 startFragment(data);
             }
         });
+
+        orderButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CONST.isProductSelected = true;
+                startFragment(CONST.listOfOrders);
+            }
+        });
     }
+
+
 
     private void startFragment(List<ProductData> data) {
         ProductListFragment fragment = new ProductListFragment(data);
