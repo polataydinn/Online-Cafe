@@ -3,7 +3,7 @@ package com.example.online_cafe.products;
 public class ProductData {
     public int productPicturePath = 0;
     public String productName = "";
-    public int productPrice = 0;
+    public Long productPrice = 0L;
 
     public int getProductPicturePath() {
         return productPicturePath;
@@ -21,15 +21,15 @@ public class ProductData {
         this.productName = productName;
     }
 
-    public int getProductPrice() {
+    public Long getProductPrice() {
         return productPrice;
     }
 
-    public void setProductPrice(int productPrice) {
+    public void setProductPrice(Long productPrice) {
         this.productPrice = productPrice;
     }
 
-    public ProductData(int productPicturePath, String productName, int productPrice) {
+    public ProductData(int productPicturePath, String productName, Long productPrice) {
         this.productPicturePath = productPicturePath;
         this.productName = productName;
         this.productPrice = productPrice;

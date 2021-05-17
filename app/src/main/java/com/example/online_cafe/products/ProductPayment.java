@@ -44,7 +44,9 @@ public class ProductPayment extends Fragment {
 
         rootNode = FirebaseDatabase.getInstance();
         reference = rootNode.getReference("orders");
-        reference.child(CONST.UUID).setValue(CONST.listOfOrders);
+        reference.child(CONST.UUID).child("order").setValue(CONST.listOfOrders);
+        CONST.usersNameAndSurname.setTotalAmount(CONST.totalAmount);
+        reference.child(CONST.UUID).child("user").setValue(CONST.usersNameAndSurname);
 
         QRGEncoder qrgEncoder = new QRGEncoder(CONST.UUID,null, QRGContents.Type.TEXT,1000);
         Bitmap qrBit = qrgEncoder.getBitmap();

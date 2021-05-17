@@ -94,51 +94,51 @@ public class CategoryFragment extends Fragment {
     public List<ProductData> setFastFoodItems(){
         List<ProductData> data = new ArrayList<>();
 
-        data.add(new ProductData(R.drawable.hamburger,"Hamburger",15));
-        data.add(new ProductData(R.drawable.pizza,"Pizza",20));
-        data.add(new ProductData(R.drawable.french_fries,"Cips",5));
-        data.add(new ProductData(R.drawable.sandwich,"Sandaviç",10));
-        data.add(new ProductData(R.drawable.toast,"Tost",10));
-        data.add(new ProductData(R.drawable.spaghetti,"Spaghetti",12));
+        data.add(new ProductData(R.drawable.hamburger,"Hamburger", (long) 15));
+        data.add(new ProductData(R.drawable.pizza,"Pizza", (long) 20));
+        data.add(new ProductData(R.drawable.french_fries,"Cips", (long)5));
+        data.add(new ProductData(R.drawable.sandwich,"Sandaviç", (long)10));
+        data.add(new ProductData(R.drawable.toast,"Tost", (long)10));
+        data.add(new ProductData(R.drawable.spaghetti,"Spaghetti", (long)12));
         return data;
     }
 
     private List<ProductData> setDrinkItems() {
         List<ProductData> data = new ArrayList<>();
 
-        data.add(new ProductData(R.drawable.lemonade,"Limonata",5));
-        data.add(new ProductData(R.drawable.coke,"Kola",3));
-        data.add(new ProductData(R.drawable.smoothi,"Smoothi",8));
-        data.add(new ProductData(R.drawable.orange_juice,"Portakal Suyu",8));
-        data.add(new ProductData(R.drawable.coffe,"Kahve",5));
-        data.add(new ProductData(R.drawable.tea,"Çay",2));
-        data.add(new ProductData(R.drawable.buttermilk,"Ayran",3));
+        data.add(new ProductData(R.drawable.lemonade,"Limonata", (long)5));
+        data.add(new ProductData(R.drawable.coke,"Kola", (long)3));
+        data.add(new ProductData(R.drawable.smoothi,"Smoothi", (long)8));
+        data.add(new ProductData(R.drawable.orange_juice,"Portakal Suyu", (long)8));
+        data.add(new ProductData(R.drawable.coffe,"Kahve", (long)5));
+        data.add(new ProductData(R.drawable.tea,"Çay", (long)2));
+        data.add(new ProductData(R.drawable.buttermilk,"Ayran", (long)3));
         return data;
     }
 
     private List<ProductData> setDessertItems() {
         List<ProductData> data = new ArrayList<>();
 
-        data.add(new ProductData(R.drawable.apple_pie,"Elmalı Turta",12));
-        data.add(new ProductData(R.drawable.ice_cream,"Dondurma",8));
-        data.add(new ProductData(R.drawable.cookie,"Kurabiye",4));
-        data.add(new ProductData(R.drawable.pudding,"Pudding",8));
-        data.add(new ProductData(R.drawable.pancake,"Pancake",10));
-        data.add(new ProductData(R.drawable.baklava,"Baklava",7));
+        data.add(new ProductData(R.drawable.apple_pie,"Elmalı Turta", (long)12));
+        data.add(new ProductData(R.drawable.ice_cream,"Dondurma", (long)8));
+        data.add(new ProductData(R.drawable.cookie,"Kurabiye", (long)4));
+        data.add(new ProductData(R.drawable.pudding,"Pudding", (long)8));
+        data.add(new ProductData(R.drawable.pancake,"Pancake", (long)10));
+        data.add(new ProductData(R.drawable.baklava,"Baklava", (long)7));
         return data;
     }
 
     private List<ProductData> setMealItems() {
         List<ProductData> data = new ArrayList<>();
-        data.add(new ProductData(R.drawable.lahmacun,"Lahmacun",5));
-        data.add(new ProductData(R.drawable.iskender,"İskender",20));
-        data.add(new ProductData(R.drawable.adana,"Adana Kebap",15));
-        data.add(new ProductData(R.drawable.patlican_kebap,"Patlıcan Kebabı",15));
-        data.add(new ProductData(R.drawable.patty,"Börek",12));
-        data.add(new ProductData(R.drawable.doner,"Döner",8));
-        data.add(new ProductData(R.drawable.rice,"Pilav",5));
-        data.add(new ProductData(R.drawable.soup,"Mercimek Çorbası",7));
-        data.add(new ProductData(R.drawable.cig_kofte,"Çiğ Köfte",10));
+        data.add(new ProductData(R.drawable.lahmacun,"Lahmacun", (long)5));
+        data.add(new ProductData(R.drawable.iskender,"İskender", (long)20));
+        data.add(new ProductData(R.drawable.adana,"Adana Kebap", (long)15));
+        data.add(new ProductData(R.drawable.patlican_kebap,"Patlıcan Kebabı", (long)15));
+        data.add(new ProductData(R.drawable.patty,"Börek", (long)12));
+        data.add(new ProductData(R.drawable.doner,"Döner", (long)8));
+        data.add(new ProductData(R.drawable.rice,"Pilav", (long)5));
+        data.add(new ProductData(R.drawable.soup,"Mercimek Çorbası", (long)7));
+        data.add(new ProductData(R.drawable.cig_kofte,"Çiğ Köfte", (long)10));
         return data;
     }
 }

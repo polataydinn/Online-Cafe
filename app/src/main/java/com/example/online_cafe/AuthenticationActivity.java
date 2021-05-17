@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.online_cafe.products.UserPaymentDataClass;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -78,22 +79,36 @@ public class AuthenticationActivity extends AppCompatActivity {
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
                     String passwordDB = snapshot.child(userEnteredUsername).child("password").getValue(String.class);
+                    CONST.usersNameAndSurname.setUserNameAndSurname(snapshot
+                            .child(userEnteredUsername)
+                            .child("nameSurname")
+                            .getValue(String.class));
 
                     if (passwordDB.equals(userEnteredPassword)) {
-                        Toast.makeText(getApplicationContext(), "Giriş Başarılı", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),
+                                "Giriş Başarılı",
+                                Toast.LENGTH_SHORT).show();
+
                         if(CONST.userType == "musteri"){
-                            Intent intentStore = new Intent(getApplicationContext(),StoreActivity.class);
+                            Intent intentStore = new Intent(getApplicationContext(),
+                                    StoreActivity.class);
                             startActivity(intentStore);
                         }
                         else{
-                            Intent intentWaiter = new Intent(getApplicationContext(),WaiterActivity.class);
+                            Intent intentWaiter = new Intent(getApplicationContext(),
+                                    WaiterActivity.class);
                             startActivity(intentWaiter);
                         }
                     }else{
-                        Toast.makeText(getApplicationContext(),"Kullanıcı Adı yada Şifre Hatalı",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),
+                                "Kullanıcı Adı yada Şifre Hatalı",
+                                Toast.LENGTH_SHORT).show();
                     }
+
                 }else{
-                    Toast.makeText(getApplicationContext(),"Kullanıcı Adı yada Şifre Hatalı",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),
+                            "Kullanıcı Adı yada Şifre Hatalı",
+                            Toast.LENGTH_SHORT).show();
                 }
             }
 

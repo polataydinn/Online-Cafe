@@ -19,4 +19,7 @@
     <string name="totalAmount">Toplam :</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="credit_card">Kredi Kartı</string>
+    <string name="cash">Nakit</string>
+    <string name="price_that_will_pay">Ödenecek Miktar</string>
 </resources>
