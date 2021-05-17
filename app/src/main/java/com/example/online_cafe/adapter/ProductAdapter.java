@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.online_cafe.CONST;
 import com.example.online_cafe.R;
 import com.example.online_cafe.products.ProductData;
+
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -19,10 +21,13 @@ import java.util.List;
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder> {
     private View.OnClickListener mListener;
     List<ProductData> list = Collections.emptyList();
-    Context context;
     public ProductAdapter(List<ProductData> data, View.OnClickListener listener){
         this.list = data;
         this.mListener = listener;
+    }
+
+    public ProductAdapter(ArrayList<ProductData> orderListToFinish) {
+        this.list = orderListToFinish;
     }
 
 

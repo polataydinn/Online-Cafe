@@ -17,4 +17,6 @@ public abstract class CONST {
     public static UserPaymentDataClass usersNameAndSurname = new UserPaymentDataClass();
     public static ArrayList<ProductData> orderListToFinish = new ArrayList<>();
     public static ArrayList<UserPaymentDataClass> userListToFinish = new ArrayList<>();
+    public static Long waiterTotalAmount = 0L;
+    public static String waiterUserName = "";
 }

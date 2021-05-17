@@ -22,4 +22,8 @@
     <string name="credit_card">Kredi Kartı</string>
     <string name="cash">Nakit</string>
     <string name="price_that_will_pay">Ödenecek Miktar</string>
+    <string name="enter_money">Para gir</string>
+    <string name="card_number_text">Kart Numarası</string>
+    <string name="date_text">Tarih</string>
+    <string name="cvv_text">CVV</string>
 </resources>

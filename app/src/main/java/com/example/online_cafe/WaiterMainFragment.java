@@ -1,16 +1,14 @@
 package com.example.online_cafe;
 
 import android.Manifest;
-import android.app.Activity;
+
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,8 +20,6 @@ import com.budiyev.android.codescanner.DecodeCallback;
 import com.google.zxing.Result;
 
 import org.jetbrains.annotations.NotNull;
-
-import java.util.ArrayList;
 
 public class WaiterMainFragment extends Fragment {
     CodeScanner codeScanner;

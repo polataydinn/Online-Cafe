@@ -9,3 +9,4 @@ public class UserPaymentDataMapper {
         return new UserPaymentDataClass((String) map.get("userNameAndSurname"),(Long) map.get("totalAmount"));
     }
 }
+
