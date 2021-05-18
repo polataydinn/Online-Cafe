@@ -1,6 +1,5 @@
 package com.example.online_cafe;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +11,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.online_cafe.products.UserPaymentDataClass;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -95,6 +93,7 @@ public class AuthenticationActivity extends AppCompatActivity {
                             startActivity(intentStore);
                         }
                         else{
+                            CONST.waiterUsername = userEnteredUsername;
                             Intent intentWaiter = new Intent(getApplicationContext(),
                                     WaiterActivity.class);
                             startActivity(intentWaiter);

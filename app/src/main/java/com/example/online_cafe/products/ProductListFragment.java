@@ -47,7 +47,6 @@ public class ProductListFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     startFragment();
-                    Toast.makeText(getContext(),"Ben çalışıyorum",Toast.LENGTH_SHORT).show();
                 }
             });
         }

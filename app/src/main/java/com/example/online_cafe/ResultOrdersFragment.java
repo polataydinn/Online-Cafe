@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -29,8 +28,6 @@ import java.util.HashMap;
 
 
 public class ResultOrdersFragment extends Fragment {
-    private Button cashButton;
-    private Button creditCardButton;
     private TextView userNameText;
     private TextView totalAmount;
 
@@ -42,8 +39,6 @@ public class ResultOrdersFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        cashButton = view.findViewById(R.id.cash_button);
-        creditCardButton = view.findViewById(R.id.credit_card_button);
         userNameText = view.findViewById(R.id.waiter_user_name);
         totalAmount = view.findViewById(R.id.price_will_pay);
 
@@ -67,7 +62,6 @@ public class ResultOrdersFragment extends Fragment {
                     recyclerView.setHasFixedSize(true);
                     recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
                     recyclerView.setAdapter(new WaiterOrderAdapter(CONST.orderListToFinish));
-                    System.out.println("");
 
                 }
             }
@@ -77,7 +71,7 @@ public class ResultOrdersFragment extends Fragment {
         totalAmountReferance.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull @NotNull Task<DataSnapshot> task) {
-                if(task.isSuccessful()){
+                if (task.isSuccessful()) {
                     CONST.waiterTotalAmount = task.getResult().getValue(Long.class);
                     totalAmount.setText(CONST.waiterTotalAmount.toString());
                 }
@@ -88,40 +82,12 @@ public class ResultOrdersFragment extends Fragment {
         userNameReferance.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull @NotNull Task<DataSnapshot> task) {
-                if (task.isSuccessful()){
-                    CONST.waiterUserName = task.getResult().getValue(String.class);
-                    userNameText.setText(CONST.waiterUserName);
+                if (task.isSuccessful()) {
+                    CONST.customerUserName = task.getResult().getValue(String.class);
+                    userNameText.setText("Müşteri, " + CONST.customerUserName);
                 }
             }
         });
-
-        cashButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CashFragment fragment = new CashFragment();
-                startFragment(fragment);
-
-            }
-        });
-
-        creditCardButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CreditCardFragment fragment = new CreditCardFragment();
-                startFragment(fragment);
-            }
-        });
-    }
-
-
-
-    private void startFragment(Fragment fragment) {
-        getActivity()
-                .getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.frame_layout_container, fragment, "FragmentReplaced")
-                .addToBackStack(null)
-                .commit();
 
     }
 }

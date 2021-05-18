@@ -18,5 +18,7 @@ public abstract class CONST {
     public static ArrayList<ProductData> orderListToFinish = new ArrayList<>();
     public static ArrayList<UserPaymentDataClass> userListToFinish = new ArrayList<>();
     public static Long waiterTotalAmount = 0L;
-    public static String waiterUserName = "";
+    public static String customerUserName = "";
+    public static boolean isQrRead = false;
+    public static String waiterUsername = "";
 }

@@ -14,7 +14,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import org.jetbrains.annotations.NotNull;
+
+import java.util.HashMap;
 
 
 public class CashFragment extends Fragment {
@@ -40,7 +45,7 @@ public class CashFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 myCash = Long.parseLong(String.valueOf(enteredCash.getText().toString()));
-                totalCash = myCash - CONST.waiterTotalAmount;
+                totalCash = myCash - CONST.totalAmount;
                 if(totalCash> 0){
                     changeMoney.setText("Para Üstü : " +totalCash + " TL");
                 }else{

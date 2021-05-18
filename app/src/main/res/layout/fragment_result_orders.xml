@@ -9,7 +9,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/result_order_rv"
-        android:layout_width="411dp"
+        android:layout_width="wrap_content"
         android:layout_height="341dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,57 +20,37 @@
         android:id="@+id/waiter_user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="112dp"
-        android:text=""
-        android:textSize="16dp"
+        android:text="Deneme İsim"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/result_order_rv" />
+
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:text="@string/price_that_will_pay"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/waiter_user_name"
-        app:layout_constraintVertical_bias="0.054" />
-
-    <Button
-        android:id="@+id/cash_button"
-        android:layout_width="151dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="68dp"
-        android:text="@string/cash"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.848"
-        app:layout_constraintStart_toEndOf="@+id/waiter_user_name"
-        app:layout_constraintTop_toBottomOf="@+id/result_order_rv" />
-
-    <Button
-        android:id="@+id/credit_card_button"
-        android:layout_width="149dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/credit_card"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.735"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/cash_button" />
+        app:layout_constraintVertical_bias="0.118" />
 
     <TextView
         android:id="@+id/price_will_pay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text=""
+        android:text="0 TL"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/credit_card_button"
-        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.131" />
+        app:layout_constraintVertical_bias="0.115" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
